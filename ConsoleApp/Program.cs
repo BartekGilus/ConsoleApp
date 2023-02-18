@@ -12,7 +12,10 @@
         static void Main(string[] args)
         {
             var reader = new DataReader();
-            reader.ImportAndPrintData("dataa.csv");
+            reader.ImportData("data.csv");
+
+            var printer = new DataPrinter(reader.ImportedObjects);
+            printer.PrintData();
         }
     }
 }
